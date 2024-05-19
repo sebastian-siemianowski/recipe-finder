@@ -41,9 +41,11 @@ The Recipe Finder application allows users to input the ingredients they have at
 - Fly.io CLI (for deployment)
 
 ### Project Structure
+```text
 recipe-finder/
 ├── backend/
 └── frontend/
+```
 
 ### Backend Setup
 
@@ -68,13 +70,17 @@ recipe-finder/
 ### Frontend Setup
 1. Navigate to the frontend directory:
    ```bash
-   cd ../frontend
+   cd ../recipe-finder-frontend
 
 2. Install Dependencies
    ```bash
    npm install
 
 3. Start the React development server:
+   ```bash
+   npm start-frontend
+   
+4. If you want to run both of them concurrently with one command, you can use the command in script in the `package.json` file.
    ```bash
    npm start
 
