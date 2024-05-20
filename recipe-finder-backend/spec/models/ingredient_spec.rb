@@ -14,7 +14,7 @@ RSpec.describe Ingredient, type: :model do
   it 'has many recipes through recipe_ingredients' do
     ingredient = create(:ingredient)
     recipe1 = create(:recipe)
-    recipe2 = create(:recipe)
+    recipe2 = create(:recipe, title: 'Another Recipe')
 
     ingredient.recipes << recipe1
     ingredient.recipes << recipe2
