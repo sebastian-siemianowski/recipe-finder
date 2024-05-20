@@ -1,0 +1,25 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/*'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - 'config/**/*'
+    - 'lib/tasks/**/*'
+    - 'spec/**/*'
+
+Rails:
+  Enabled: true
+
+RSpec:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 120

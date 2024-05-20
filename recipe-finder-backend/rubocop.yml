@@ -1,0 +1,22 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/*'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - 'config/**/*'
+    - 'lib/tasks/**/*'
+
+Rails:
+  Enabled: true
+
+RSpec:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 120

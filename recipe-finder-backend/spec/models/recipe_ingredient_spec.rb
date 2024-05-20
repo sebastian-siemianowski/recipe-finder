@@ -1,18 +1,19 @@
 require 'rails_helper'
 
-RSpec.describe RecipeIngredient, type: :model do
+RSpec.describe RecipeIngredient do
+  let(:recipe_ingredient) { build(:recipe_ingredient) }
+  let(:recipe_ingredient_without_recipe) { build(:recipe_ingredient, recipe: nil) }
+  let(:recipe_ingredient_without_ingredient) { build(:recipe_ingredient, ingredient: nil) }
+
   it 'is valid with valid attributes' do
-    recipe_ingredient = build(:recipe_ingredient)
     expect(recipe_ingredient).to be_valid
   end
 
   it 'is invalid without a recipe' do
-    recipe_ingredient = build(:recipe_ingredient, recipe: nil)
-    expect(recipe_ingredient).not_to be_valid
+    expect(recipe_ingredient_without_recipe).not_to be_valid
   end
 
   it 'is invalid without an ingredient' do
-    recipe_ingredient = build(:recipe_ingredient, ingredient: nil)
-    expect(recipe_ingredient).not_to be_valid
+    expect(recipe_ingredient_without_ingredient).not_to be_valid
   end
 end
