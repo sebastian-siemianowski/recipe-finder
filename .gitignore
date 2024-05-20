@@ -43,3 +43,4 @@
 .idea/
 /recipe-finder-backend/tmp/*
 /recipe-finder-backend/log/test.log
+/recipe-finder-backend/.byebug_history
