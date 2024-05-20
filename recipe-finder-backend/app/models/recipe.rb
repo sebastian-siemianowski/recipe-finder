@@ -4,11 +4,11 @@ class Recipe < ApplicationRecord
 
   validates :title, presence: true, uniqueness: true
 
-  # Scope to filter recipes by ingredients
+  # Scope to filter recipes by ingredients using partial match
   scope :with_ingredients, ->(ingredient_names) {
     joins(:ingredients)
-      .where(ingredients: { name: ingredient_names })
+      .where(ingredient_names.map { |name| "ingredients.name ILIKE ?" }.join(' OR '), *ingredient_names.map { |name| "%#{name}%" })
       .group('recipes.id')
-      .having('COUNT(ingredients.id) = ?', ingredient_names.size)
+      .having('COUNT(ingredients.id) >= ?', ingredient_names.size)
   }
 end
