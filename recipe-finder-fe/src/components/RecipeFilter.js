@@ -4,10 +4,14 @@ import { useTransition, animated } from '@react-spring/web';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import ClipLoader from 'react-spinners/ClipLoader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faTimes, faClock, faStar, faUtensils, faChevronLeft, faChevronRight, faStepBackward, faStepForward } from '@fortawesome/free-solid-svg-icons';
+import {
+    faSearch, faTimes, faClock, faStar, faUtensils,
+    faChevronLeft, faChevronRight, faStepBackward, faStepForward
+} from '@fortawesome/free-solid-svg-icons';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const RecipeFilter = () => {
+    const apiUrl = process.env.REACT_APP_BACKEND_API_URL;
     const [ingredients, setIngredients] = useState('');
     const [recipes, setRecipes] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -22,7 +26,7 @@ const RecipeFilter = () => {
     const fetchRecipes = async (page = 1) => {
         setLoading(true);
         try {
-            const response = await axios.get(`http://localhost:3000/recipes`, {
+            const response = await axios.get(`${apiUrl}/recipes`, {
                 params: {
                     ingredients: ingredients,
                     page: page,

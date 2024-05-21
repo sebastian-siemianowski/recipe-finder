@@ -75,28 +75,30 @@ recipe-finder/
 2. Install Dependencies
    ```bash
    npm install
+   
+3. Rename .env_sample to.env and add your backend URL: (or leave it by default to localhost:3000 for Rails API)
 
-3. Start the React development server:
+4. Start the React development server:
    ```bash
    npm start-frontend
    
-4. If you want to run both of them concurrently with one command, you can use the command in script in the `package.json` file.
+5. If you want to run both of them concurrently with one command, you can use the command in script in the `package.json` file.
    ```bash
    npm start
 
 ## Usage
 
-1. Navigate to the frontend URL (usually `http://localhost:3000`) in your web browser.
+1. Navigate to the frontend URL (usually `http://localhost:3001` or public url `https://recipe-finder-fe.fly.dev/`) in your web browser.
 2. Enter the ingredients you have at home in the search bar and click "Search".
 3. Browse the list of matching recipes and click on a recipe to view details.
 
-### Configuring the Frontend to Connect to the Backend
+### Configuring the Frontend to Connect to the Public Backend
 
 Ensure the frontend is configured to connect to the backend API. You can set this up using environment variables.
 
 1. Create a `.env` file in the `frontend` directory:
 
    ```plaintext
-   RAILS_BACKEND_API=https://my-rails-app.fly.dev
+   REACT_APP_BACKEND_API_URL=https://recipe-finder-be.fly.dev/
 
    

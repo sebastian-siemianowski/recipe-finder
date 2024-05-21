@@ -1,5 +1,10 @@
 class RecipeImporter
   def self.import(file_path)
+    if Recipe.exists?
+      Rails.logger.debug "Recipes already exist. Skipping import."
+      return
+    end
+
     recipes = load_recipes(file_path)
     limit_records_for_test_environment!(recipes)
     import_recipes_with_progress(recipes)
