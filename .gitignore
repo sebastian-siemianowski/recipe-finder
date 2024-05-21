@@ -5,42 +5,45 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/recipe-finder-backend/.bundle
+/recipe-finder-be/.bundle
 
 # Ignore the default SQLite database.
-/recipe-finder-backend/db/*.sqlite3
-/recipe-finder-backend/db/*.sqlite3-*
+/recipe-finder-be/db/*.sqlite3
+/recipe-finder-be/db/*.sqlite3-*
 
 # Ignore all logfiles and tempfiles.
-/recipe-finder-backend/log/*
-/recipe-finder-backend/tmp/*
-!/recipe-finder-backend/log/.keep
-!/recipe-finder-backend/tmp/.keep
+/recipe-finder-be/log/*
+/recipe-finder-be/tmp/*
+!/recipe-finder-be/log/.keep
+!/recipe-finder-be/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/recipe-finder-backend/tmp/pids/*
-!/recipe-finder-backend/tmp/pids/
-!/recipe-finder-backend/tmp/pids/.keep
+/recipe-finder-be/tmp/pids/*
+!/recipe-finder-be/tmp/pids/
+!/recipe-finder-be/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-/recipe-finder-backend/storage/*
-!/recipe-finder-backend/storage/.keep
-/recipe-finder-backend/tmp/storage/*
-!/recipe-finder-backend/tmp/storage/
-!/recipe-finder-backend/tmp/storage/.keep
+/recipe-finder-be/storage/*
+!/recipe-finder-be/storage/.keep
+/recipe-finder-be/tmp/storage/*
+!/recipe-finder-be/tmp/storage/
+!/recipe-finder-be/tmp/storage/.keep
 
-/recipe-finder-backend/public/assets
+/recipe-finder-be/public/assets
 
 # Ignore master key for decrypting credentials and more.
-/recipe-finder-backend/config/master.key
+/recipe-finder-be/config/master.key
 
-/recipe-finder-backend/app/assets/builds/*
-!/recipe-finder-backend/app/assets/builds/.keep
+/recipe-finder-be/app/assets/builds/*
+!/recipe-finder-be/app/assets/builds/.keep
 
-/recipe-finder-backend/node_modules
-/recipe-finder-frontend/node_modules
+/recipe-finder-be/node_modules
+/recipe-finder-fe/node_modules
 
 .idea/
-/recipe-finder-backend/tmp/*
-/recipe-finder-backend/log/test.log
-/recipe-finder-backend/.byebug_history
+/recipe-finder-be/tmp/*
+/recipe-finder-be/log/test.log
+/recipe-finder-be/.byebug_history
+
+/recipe-finder-be/.env
+/recipe-finder-fe/.env
