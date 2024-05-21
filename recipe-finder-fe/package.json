@@ -1,5 +1,5 @@
 {
-  "name": "recipe-finder-frontend",
+  "name": "recipe-finder-fe",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,7 +22,7 @@
   "scripts": {
     "start": "concurrently \"npm run start-frontend\" \"npm run start-backend\"",
     "start-frontend": "PORT=3001 react-scripts start",
-    "start-backend": "cd ../recipe-finder-backend && rails server",
+    "start-backend": "cd ../recipe-finder-be && rails server",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -47,7 +47,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.5",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/plugin-transform-private-property-in-object": "^7.24.5",
     "@babel/preset-env": "^7.24.5",
     "@babel/preset-react": "^7.24.1",
