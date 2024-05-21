@@ -113,7 +113,7 @@ const RecipeFilter = () => {
             </form>
             <div className="mt-10 w-full max-w-4xl">
                 {loading ? (
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center" data-testid="loading-indicator">
                         <ClipLoader size={50} color={"#123abc"} loading={loading} />
                     </div>
                 ) : recipes.length > 0 ? (
