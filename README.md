@@ -1,6 +1,6 @@
 # Recipe Finder
 
-Recipe Finder is a web application that helps users find the most relevant recipes they can prepare with the ingredients they have at home. The application consists of a React frontend and a Rails API backend.
+Recipe Finder is a sophisticated web application prototype designed to assist users in discovering recipes they can prepare with ingredients available at home. This application comprises a React frontend and a Rails API backend, seamlessly integrated to provide a smooth user experience.
 
 ## Table of Contents
 
@@ -9,19 +9,15 @@ Recipe Finder is a web application that helps users find the most relevant recip
 - [Tech Stack](#tech-stack)
 - [Setup Instructions](#setup-instructions)
 - [Usage](#usage)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Description
 
-The Recipe Finder application allows users to input the ingredients they have at home and receive a list of recipes they can make with those ingredients. Users can view recipe details, including ingredients, preparation steps, and cook time. Additionally, users can rate recipes and see average ratings for each recipe.
+Recipe Finder enables users to input ingredients they have at home and receive a curated list of recipes they can make. Users can view a list of recipes that match their ingredients.
 
 ## Features
 
-- Input ingredients to find matching recipes
-- View detailed recipe information
-- Rate recipes and view average ratings
+- **Ingredient-Based Search**: Enter available ingredients to find matching recipes.
+- **Recipe List**: View a list of recipes based on the ingredients provided.
 
 ## Tech Stack
 
@@ -34,6 +30,8 @@ The Recipe Finder application allows users to input the ingredients they have at
 
 ### Prerequisites
 
+Ensure the following are installed on your system:
+
 - Node.js (for the React frontend)
 - Ruby and Rails (for the backend)
 - PostgreSQL (for the database)
@@ -41,6 +39,7 @@ The Recipe Finder application allows users to input the ingredients they have at
 - Fly.io CLI (for deployment)
 
 ### Project Structure
+
 ```text
 recipe-finder/
 ├── backend/
@@ -88,9 +87,9 @@ recipe-finder/
 
 ## Usage
 
-1. Navigate to the frontend URL (usually `http://localhost:3001` or public url `https://recipe-finder-fe.fly.dev/`) in your web browser.
-2. Enter the ingredients you have at home in the search bar and click "Search".
-3. Browse the list of matching recipes and click on a recipe to view details.
+1. Navigate to the frontend URL (usually http://localhost:3001 or public URL https://recipe-finder-fe.fly.dev/) in your web browser.
+2. Search for recipes: Enter the ingredients you have at home in the search bar and click "Find Recipes".
+3. Browse the list of matching recipes: The application will display a list of recipes based on the provided ingredients.
 
 ### Configuring the Frontend to Connect to the Public Backend
 
@@ -100,5 +99,4 @@ Ensure the frontend is configured to connect to the backend API. You can set thi
 
    ```plaintext
    REACT_APP_BACKEND_API_URL=https://recipe-finder-be.fly.dev/
-
-   
+   ```
